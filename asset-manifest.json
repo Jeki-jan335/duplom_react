@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.js": "/duplom_react/static/js/main.b95d132a.chunk.js",
+    "main.js.map": "/duplom_react/static/js/main.b95d132a.chunk.js.map",
+    "runtime~main.js": "/duplom_react/static/js/runtime~main.6af2f44b.js",
+    "runtime~main.js.map": "/duplom_react/static/js/runtime~main.6af2f44b.js.map",
+    "static/js/2.1c480718.chunk.js": "/duplom_react/static/js/2.1c480718.chunk.js",
+    "static/js/2.1c480718.chunk.js.map": "/duplom_react/static/js/2.1c480718.chunk.js.map",
+    "index.html": "/duplom_react/index.html",
+    "precache-manifest.27ea5295a143b0a4c18b437d78f7d72c.js": "/duplom_react/precache-manifest.27ea5295a143b0a4c18b437d78f7d72c.js",
+    "service-worker.js": "/duplom_react/service-worker.js"
+  }
+}
