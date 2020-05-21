@@ -1,1 +1,1 @@
-ReactJS, Belarusbank API
+ReactJS, Api Беларусбанк, CSS3, HTML5
