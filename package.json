@@ -1,7 +1,7 @@
 {
   "name": "belarusbank-course",
   "version": "0.1.0",
-  "home":"https://jeki-jan335.github.io/diplom_work/",
+  "home": "https://github.com/Jeki-jan335/diplom_work.github.io",
   "private": true,
   "dependencies": {
     "bootstrap": "^4.5.0",
@@ -10,6 +10,7 @@
     "lodash": "^4.17.15",
     "react": "^16.9.0",
     "react-bootstrap": "^1.0.1",
+    "react-deploy": "0.0.15",
     "react-dom": "^16.13.1",
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
@@ -22,8 +23,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy":"npm run build",
-    "deploy":"gh-pages -d build"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
