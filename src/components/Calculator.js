@@ -5,7 +5,8 @@ const Calculator = ({ course, isBuying }) => {
   const [eur, setE] = useState();
   const [usd, setU] = useState();
   const [rub, setR] = useState();
-
+  console.log(45);
+  
   const { USD_in, RUB_in, EUR_in, USD_out, RUB_out, EUR_out } = course[0];
   console.log(isBuying);
 
