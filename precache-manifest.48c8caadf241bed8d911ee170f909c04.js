@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "10392dd88556f09ad876c051727cce28",
+    "revision": "c54e3aaf51ccb47a56e69ca62cec7245",
     "url": "/duplom_react/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/duplom_react/static/js/2.158a105b.chunk.js"
   },
   {
-    "revision": "b3853507cc6873fd3c0f",
-    "url": "/duplom_react/static/js/main.83bcdbbf.chunk.js"
+    "revision": "763586552f8f8a32fcd5",
+    "url": "/duplom_react/static/js/main.42adac75.chunk.js"
   },
   {
     "revision": "7195916b3c492cc7ced9",
