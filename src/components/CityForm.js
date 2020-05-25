@@ -72,7 +72,7 @@ const CityForm = () => {
                   type='text'
                   pattern="^[А-Яа-яЁё\s]+$"
                   required
-                  placeholder='Введите город( Только русские слова )'
+                  placeholder='Введите город'
                   onChange={onChange}
                 />
               </label>

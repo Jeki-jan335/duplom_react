@@ -8,12 +8,16 @@ const Calculator = ({ course, isBuying }) => {
   var [eur, setE] = useState();
   var [usd, setU] = useState();
   var [rub, setR] = useState();
-  
-  var { USD_in, RUB_in, EUR_in, USD_out, RUB_out, EUR_out } = course[0];
+  try {
+    var { USD_in, RUB_in, EUR_in, USD_out, RUB_out, EUR_out } = course[0];
+  } catch (error) {
+    console.log(78);
+  }
+ 
 
   const onChangeBYN = e => {
     if (isBuying === 'buying') {
-      if (USD_in === undefined) {
+      if (USD_in == undefined && USD_in == "undefined") {
         console.log("error");
       } else {
         setU((USD_in * e.target.value).toFixed(4));
@@ -23,7 +27,7 @@ const Calculator = ({ course, isBuying }) => {
       }
 
     } else if (isBuying === 'selling') {
-      if (USD_in === undefined) {
+      if (USD_in == undefined && USD_in == "undefined") {
         console.log("error");
       } else {
         setU((USD_out * e.target.value).toFixed(4));
