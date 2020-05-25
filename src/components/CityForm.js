@@ -37,6 +37,9 @@ const CityForm = () => {
       if ((document.getElementById('input-type').selectedIndex) === 2) {
         setBuying( 'selling');
       }
+      if ((document.getElementById('input-type').selectedIndex) === 0) {
+        setBuying( 'buying');
+      }
     }
   };
 
