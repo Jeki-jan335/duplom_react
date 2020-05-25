@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/duplom_react/precache-manifest.3bae8ce604636407e5b0ce3f3ab77440.js"
+  "/duplom_react/precache-manifest.14c13063c13d577db6036f100f79fbd4.js"
 );
 
 self.addEventListener('message', (event) => {
