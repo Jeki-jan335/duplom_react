@@ -12,6 +12,7 @@ const Calculator = ({ course, isBuying }) => {
   var { USD_in, RUB_in, EUR_in, USD_out, RUB_out, EUR_out } = course[0];
 
   
+console.log(77);
 
   const onChangeBYN = e => {
     if (isBuying === 'buying') {
