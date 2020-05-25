@@ -20,7 +20,12 @@ body {
   background: #157f4c;
   color: #fff;
 }
-
+.display{
+  display: none;
+}
+.widthAll{
+  width: 100%;
+}
 .container {
   max-width: 1400px;
   margin: auto;

@@ -30,6 +30,14 @@ const CityForm = () => {
 
   const changeType = e => {
     setBuying(e.target.value);
+    if (document.getElementById('input-type') && document.getElementById('input-type').selectedIndex != -1) {
+      if ((document.getElementById('input-type').selectedIndex) === 1) {
+        setBuying( 'buying');
+      }
+      if ((document.getElementById('input-type').selectedIndex) === 2) {
+        setBuying( 'selling');
+      }
+    }
   };
 
   const onSubmit = e => {
@@ -40,7 +48,7 @@ const CityForm = () => {
   const getBanks = async city => {
     const req = await fetch(
       'https://cors-anywhere.herokuapp.com/' +
-        `https://belarusbank.by/api/kursExchange?city=${city}`
+      `https://belarusbank.by/api/kursExchange?city=${city}`
     );
 
     const res = await req.json();
@@ -55,11 +63,16 @@ const CityForm = () => {
           <h2>Поиск</h2>
           <form className='form-group' onSubmit={onSubmit}>
             <div>
-              <input
-                type='text'
-                placeholder='Введите город...'
-                onChange={onChange}
-              />
+              <label className="widthAll">
+                <p className="display">Только русские слова</p>
+                <input
+                  type='text'
+                  pattern="^[А-Яа-яЁё\s]+$"
+                  required
+                  placeholder='Введите город( Только русские слова )'
+                  onChange={onChange}
+                />
+              </label>
             </div>
             <div className='checkboxes'>
               <div>
@@ -77,9 +90,10 @@ const CityForm = () => {
             </div>
             <div>
               <label htmlFor='isSelected'>Выберите категорию </label>
-              <select onChange={changeType} name='isSelected' class='select'>
-                <option value='selling'>Покупка</option>
-                <option value='buying'>Продажа</option>
+              <select onChange={changeType} name='isSelected' class='select' id='input-type'>
+                <option value='none'>Выбор</option>
+                <option value='selling' id='1'>Покупка</option>
+                <option value='buying' id='2'>Продажа</option>
               </select>
             </div>
             <div>

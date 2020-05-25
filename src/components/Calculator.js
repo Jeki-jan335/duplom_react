@@ -1,26 +1,38 @@
 import React, { useState } from 'react';
 
+
+
 const Calculator = ({ course, isBuying }) => {
-  const [byn, setB] = useState();
-  const [eur, setE] = useState();
-  const [usd, setU] = useState();
-  const [rub, setR] = useState();
-  console.log(45);
+
+  var [byn, setB] = useState();
+  var [eur, setE] = useState();
+  var [usd, setU] = useState();
+  var [rub, setR] = useState();
   
-  const { USD_in, RUB_in, EUR_in, USD_out, RUB_out, EUR_out } = course[0];
-  console.log(isBuying);
+  var { USD_in, RUB_in, EUR_in, USD_out, RUB_out, EUR_out } = course[0];
+
+  
 
   const onChangeBYN = e => {
     if (isBuying === 'buying') {
-      setU((USD_in * e.target.value).toFixed(4));
-      setB(e.target.value);
-      setE((RUB_in * e.target.value).toFixed(4));
-      setR((EUR_in * e.target.value).toFixed(4));
+      if (USD_in === undefined) {
+        console.log("error");
+      } else {
+        setU((USD_in * e.target.value).toFixed(4));
+        setB(e.target.value);
+        setE((RUB_in * e.target.value).toFixed(4));
+        setR((EUR_in * e.target.value).toFixed(4));
+      }
+
     } else if (isBuying === 'selling') {
-      setU((USD_out * e.target.value).toFixed(4));
-      setB(e.target.value);
-      setE((RUB_out * e.target.value).toFixed(4));
-      setR((EUR_out * e.target.value).toFixed(4));
+      if (USD_in === undefined) {
+        console.log("error");
+      } else {
+        setU((USD_out * e.target.value).toFixed(4));
+        setB(e.target.value);
+        setE((RUB_out * e.target.value).toFixed(4));
+        setR((EUR_out * e.target.value).toFixed(4));
+      }
     }
   };
 
@@ -31,27 +43,29 @@ const Calculator = ({ course, isBuying }) => {
         <div>
           <label htmlFor='byn'> USD</label>
           <input
-            type='text'
+            type='number'
             name='byn'
+            pattern="^[0-9]+$"
             defaultValue={byn}
             onChange={onChangeBYN}
           />
         </div>
         <div>
           <label htmlFor='usd'>BYN </label>
-          <input type='text' name='usd' defaultValue={usd} disabled />
+          <input type='number' name='usd' defaultValue={usd} disabled />
         </div>
         <div>
           <label htmlFor='eur'>EUR </label>
-          <input type='text' name='eur' defaultValue={eur} disabled />
+          <input type='number' name='eur' defaultValue={eur} disabled />
         </div>
         <div>
           <label htmlFor='rub'>RUB </label>
-          <input type='text' name='rub' defaultValue={rub} disabled />
+          <input type='number' name='rub' defaultValue={rub} disabled />
         </div>
       </form>
     </div>
   );
+
 };
 
 export default Calculator;
